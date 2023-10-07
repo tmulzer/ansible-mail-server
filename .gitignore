@@ -2,3 +2,4 @@
 group_vars/all/vault.yml
 .gitsecret/keys/random_seed
 !*.secret
+hosts
