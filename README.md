@@ -1,11 +1,11 @@
 # Ansible playbook to setup a mail server
 
-This is an Ansible-Playbook for the great mail server setup described in this tutorial: https://thomas-leister.de/mailserver-debian-stretch/ written by Thomas Leister.
+This is an Ansible-Playbook for the great mail server setup described in this tutorial: https://thomas-leister.de/mailserver-debian-buster/ written by Thomas Leister.
 
 ## Requirements
 
 - Ansible >= 2.7
-- Server with Debian Bullseye operating system (the installation on Ubuntu will also work, but is not tested)
+- Server with Debian Bookworm operating system (the installation on Ubuntu may also work, but is not tested)
 - SSH key to login to the server
 - Public domain resolving to the server
 
