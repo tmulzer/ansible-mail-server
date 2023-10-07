@@ -76,12 +76,6 @@
     mode: "0640"
   tags: postfix
 
-- name: Copy postscreen_access
-  copy:
-    src: files/postscreen_access
-    dest: /etc/postfix/postscreen_access
-  tags: postfix
-
 - name: Copy without_ptr
   copy:
     src: files/without_ptr
@@ -96,6 +90,10 @@
 
 - name: Create postmap
   command: postmap /etc/postfix/without_ptr
+  tags: postfix
+
+- name: Create DH Postfix
+  command: openssl dhparam -out /etc/postfix/dh2048.pem 2048
   tags: postfix
 
 - name: Newaliases
