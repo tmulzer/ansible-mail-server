@@ -5,6 +5,7 @@
   user:
     name: vmail
     home: /var/vmail
+    shell: /usr/sbin/nologin
 
 - name: Create mail user sieve directory
   file:
