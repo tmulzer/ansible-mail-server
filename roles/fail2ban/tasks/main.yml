@@ -10,8 +10,17 @@
 
 - name: update configuration file - /etc/fail2ban/fail2ban.local
   ansible.builtin.template:
-    src: etc/fail2ban/fail2ban.local.j2
+    src: roles/fail2ban/templates/etc/fail2ban/fail2ban.local.j2
     dest: /etc/fail2ban/fail2ban.local
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart fail2ban
+
+- name: update configuration file - /etc/fail2ban/jail.local
+  ansible.builtin.template:
+    src: roles/fail2ban/templates/etc/fail2ban/jail.local.j2
+    dest: /etc/fail2ban/jail.local
     owner: root
     group: root
     mode: 0644
