@@ -5,6 +5,7 @@
   become: yes
   roles:
     - general
+    - fail2ban
     - certbot
     - mariadb
     - dovecot
