@@ -1,0 +1,10 @@
+---
+# Install Fail2Ban
+#
+
+- name: Install package fail2ban
+  apt: 
+    pkg:
+      - fail2ban
+    state: latest
+
