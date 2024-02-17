@@ -8,6 +8,16 @@
       - fail2ban
     state: latest
 
+- name: update configuration file - /etc/fail2ban/fail2ban.local
+  ansible.builtin.template:
+    src: etc/fail2ban/fail2ban.local.j2
+    dest: /etc/fail2ban/fail2ban.local
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart fail2ban
+
+
 - name:
   ansible.builtin.service:
     name: fail2ban
