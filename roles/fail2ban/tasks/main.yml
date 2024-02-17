@@ -8,3 +8,8 @@
       - fail2ban
     state: latest
 
+- name:
+  ansible.builtin.service:
+    name: fail2ban
+    state: started
+    enabled: true
